@@ -8,6 +8,8 @@ if (!isset($_GET['profile'])) {
 
 $character = selectPlayer($connection_world, $_GET['profile-name']);
 $online = isUserOnline($connection_world, $_GET['profile-name']);
+echo $online;
+
 $money = setUserWealth($character[4]);
 ?>
 <html>

@@ -36,21 +36,24 @@ loggedIn($_SESSION['name']);
                             <div class="panel-body">
                                 <?php
                                 $banned = 0;
-                                $query = mysqli_prepare($connection_world, "SELECT player_name, rank FROM player WHERE banned = ?");
+
+                                $query = mysqli_prepare($connection_world, "SELECT player_name, rank, online FROM player WHERE banned = ?");
                                 mysqli_stmt_bind_param($query, "i", $banned);
                                 mysqli_stmt_execute($query);
-                                mysqli_stmt_bind_result($query, $name, $rank);
+                                mysqli_stmt_bind_result($query, $name, $rank, $online);
 
                                 $i = 1;
                                 echo '<table class="table">';
-                                echo '<thead><th>Nr.</th><th>Name</th><th>Rank</th><th>Profile</th></thead>';
+                                echo '<thead><th>Nr.</th><th>Name</th><th>Rank</th><th>Status</th><th>Profile</th></thead>';
                                 while (mysqli_stmt_fetch($query)) {
+
                                     echo '<form method="GET" action="profile.php">';
                                     echo '<tr>';
 
                                     echo '<td>#' . $i . '</td>';
                                     echo '<td>' . $name . '</td>';
                                     echo '<td>' . $rank . '</td>';
+                                    echo '<td>' . isUserOnline($connection_world, $name) . '</td>';
                                     echo'<input type="hidden" name="profile-name" value="' . $name . '">';
                                     echo '<td><input type="submit" class="btn btn-primary" name="profile" value="' . $name . '\'s profile"></td>';
                                     echo '</form>';

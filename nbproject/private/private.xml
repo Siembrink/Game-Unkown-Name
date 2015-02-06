@@ -5,11 +5,8 @@
         <group>
             <file>file:/C:/xampp/htdocs/maffia/index.php</file>
             <file>file:/C:/xampp/htdocs/maffia/game/includes/functions.php</file>
-            <file>file:/C:/xampp/htdocs/maffia/css/style.css</file>
-            <file>file:/C:/xampp/htdocs/maffia/game/layout/navside.php</file>
-            <file>file:/C:/xampp/htdocs/maffia/game/index.php</file>
-            <file>file:/C:/xampp/htdocs/maffia/game/news.php</file>
-            <file>file:/C:/xampp/htdocs/maffia/includes/config.php</file>
+            <file>file:/C:/xampp/htdocs/maffia/game/members.php</file>
+            <file>file:/C:/xampp/htdocs/maffia/game/messages.php</file>
         </group>
     </open-files>
 </project-private>

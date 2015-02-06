@@ -17,9 +17,9 @@
                         <ul class = "nav nav-pills nav-stacked">
                             <li><a href = "/maffia/game/index.php">Home</a></li>
                             <li><a href = "/maffia/game/news.php">News</a></li>
-                            <li><a href = "#">FAQ</a></li>
+                            <li><a href = "/maffia/game/faq.php">FAQ</a></li>
                             <li><a href = "/maffia/game/members.php">Members</a></li>
-                            <li><a href = "#">Rules</a></li>
+                            <li><a href = "/maffia/game/rules.php">Rules</a></li>
                             <li><a href = "logout.php">Logout</a></li>
                         </ul>
                     </ul>

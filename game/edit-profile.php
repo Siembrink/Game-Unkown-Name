@@ -41,7 +41,13 @@ loggedIn($_SESSION['name']);
                                 </ul>
                             </div>
                             <div class="panel-body">
-
+                                <form method="post">
+                                    <label>To :</label> <input class="form-control" type="text" maxlength="15" name="to"/><br />
+                                    <label>Subject :</label> <input class="form-control" type='text' maxlength='15' name='subject'/><br />
+                                    <label>Message :</label> <textarea class="form-control" name="message" /> </textarea><br />
+                                    <input class='btn btn-primary' type="submit" name="send" value="Send" />
+                                    <input class='btn btn-danger' type="reset" value="Reset" /> <br />
+                                </form>
                             </div>
                             <div class='panel-footer'>Account Management</div>
                         </div>

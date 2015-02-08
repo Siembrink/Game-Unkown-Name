@@ -43,17 +43,17 @@ loggedIn($_SESSION['name']);
                             <div class="panel-body">
                                 <h4 class="page-header">Inbox</h4>
                                 <div align="right">
-                                    <label>Send message</label> <button type="submit" class="btn btn-info" name="delete"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></button>
+                                    <label>Send message</label><a href="create_message.php"><button class="btn btn-info" ><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></button></a>
                                 </div>
                                 <?php
                                 $query = mysqli_prepare($connection_world, "SELECT * FROM message WHERE `to` = ?");
                                 mysqli_stmt_bind_param($query, "s", $_SESSION['name']);
                                 mysqli_stmt_execute($query);
-                                mysqli_stmt_bind_result($query, $id, $from, $to, $date, $read, $message);
+                                mysqli_stmt_bind_result($query, $id, $from, $to, $date, $read, $message, $subject);
 
 
                                 echo '<table class="table">';
-                                echo '<thead><th>#</th><th>From</th><th>Date</th><th>Read</th><th>Delete</th></thead>';
+                                echo '<thead><th>#</th><th>From</th><th>Subject</th><th>Date</th><th>Read</th><th>Delete</th></thead>';
                                 while (mysqli_stmt_fetch($query)) {
                                     if ($read == 0) {
                                         echo '<form method="POST">';
@@ -61,6 +61,7 @@ loggedIn($_SESSION['name']);
 
                                         echo '<td><button type="button" class="btn btn-success" disabled>New</button></td>';
                                         echo '<td>' . $from . '</td>';
+                                        echo '<td>' . $subject . '</td>';
                                         echo '<td>' . $date . '</td>';
                                         echo'<input type="hidden" name="message-id" value="' . $id . '">';
                                         echo'<input type="hidden" name="message" value="' . $message . '">';
@@ -76,6 +77,7 @@ loggedIn($_SESSION['name']);
 
                                         echo '<td><button type="button" class="btn btn-danger" disabled>Old</button></td>';
                                         echo '<td>' . $from . '</td>';
+                                        echo '<td>' . $subject . '</td>';
                                         echo '<td>' . $date . '</td>';
                                         echo'<input type="hidden" name="message-id" value="' . $id . '">';
                                         echo'<input type="hidden" name="message" value="' . $message . '">';

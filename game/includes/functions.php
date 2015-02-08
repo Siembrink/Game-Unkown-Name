@@ -27,6 +27,16 @@ function selectPlayer($connection, $username) {
     return array($username, $rank, $progress, $family, $money, $ban, $avatar);
 }
 
+function doesPlayerExist($connection, $username) {
+    $sql = "SELECT * FROM player WHERE player_name = '$username'";
+    $query = mysqli_query($connection, $sql);
+    if (mysqli_num_rows($query) > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function loggedIn($username) {
     if ($username == "") {
         header("/maffia/index.php");
@@ -45,6 +55,16 @@ function isUserOnline($connection, $username) {
     } else {
         return '<span class="label label-success">Online</span>';
     }
+}
+
+function usersOnline($connection) {
+    $number = 1;
+    $select = mysqli_prepare($connection, "SELECT count(online) FROM player WHERE online = ?");
+    mysqli_stmt_bind_param($select, "i", $number);
+    mysqli_execute($select);
+    mysqli_stmt_bind_result($select, $online);
+    mysqli_stmt_fetch($select);
+    return $online;
 }
 
 function setUserWealth($money) {

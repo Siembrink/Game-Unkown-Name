@@ -34,7 +34,10 @@
 
                     <ul class = "nav nav-sidebar">
                         <ul class = "nav nav-pills nav-stacked">
-
+                            <li><a href="/maffia/game/crime.php">Crime</a></li>
+                            <li><a href="#">Org. Crime</a></li>
+                            <li><a href="#">Car stealing</a></li>
+                            <li><a href="#">Bankrob</a></li>
                         </ul>
                     </ul>
                 </div>

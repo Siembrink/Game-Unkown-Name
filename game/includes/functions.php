@@ -19,12 +19,12 @@ function selectWebRank($connection, $username) {
 }
 
 function selectPlayer($connection, $username) {
-    $select = mysqli_prepare($connection, "SELECT player_name, rank, progress, family, money, banned, avatar FROM player WHERE player_name = ?");
+    $select = mysqli_prepare($connection, "SELECT player_name, rank, progress, family, money, banned, avatar, profile_text FROM player WHERE player_name = ?");
     mysqli_stmt_bind_param($select, "s", $username);
     mysqli_execute($select);
-    mysqli_stmt_bind_result($select, $username, $rank, $progress, $family, $money, $ban, $avatar);
+    mysqli_stmt_bind_result($select, $username, $rank, $progress, $family, $money, $ban, $avatar, $text);
     mysqli_stmt_fetch($select);
-    return array($username, $rank, $progress, $family, $money, $ban, $avatar);
+    return array($username, $rank, $progress, $family, $money, $ban, $avatar, $text);
 }
 
 function doesPlayerExist($connection, $username) {

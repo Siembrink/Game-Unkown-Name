@@ -8,7 +8,6 @@ if (!isset($_GET['profile'])) {
 
 $character = selectPlayer($connection_world, $_GET['profile-name']);
 $online = isUserOnline($connection_world, $_GET['profile-name']);
-echo $online;
 
 $money = setUserWealth($character[4]);
 ?>
@@ -75,10 +74,8 @@ $money = setUserWealth($character[4]);
 
                                 </div>
                                 <div class="col-sm-12">
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ex vitae cursus commodo. Fusce non augue sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce molestie varius diam, ut pellentesque nibh feugiat hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed maximus vestibulum turpis, et commodo purus fermentum vitae. Proin facilisis nunc et tortor mattis commodo. Aenean rutrum sollicitudin sodales. Fusce feugiat massa diam, eu tristique ipsum tristique eu. Duis vestibulum nibh elementum odio efficitur semper. In ultricies auctor mi, a eleifend purus scelerisque sed. Nulla rhoncus risus tortor, fermentum luctus tortor pretium sit amet.Aliquam tempor tincidunt rutrum. Proin dictum tempor odio eu lobortis. Etiam porta est eu pulvinar dictum. Cras fringilla molestie lorem, sit amet imperdiet tortor
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ex vitae cursus commodo. Fusce non augue sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce molestie varius diam, ut pellentesque nibh feugiat hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed maximus vestibulum turpis, et commodo purus fermentum vitae. Proin facilisis nunc et tortor mattis commodo. Aenean rutrum sollicitudin sodales. Fusce feugiat massa diam, eu tristique ipsum tristique eu. Duis vestibulum nibh elementum odio efficitur semper. In ultricies auctor mi, a eleifend purus scelerisque sed. Nulla rhoncus risus tortor, fermentum luctus tortor pretium sit amet.Aliquam tempor tincidunt rutrum. Proin dictum tempor odio eu lobortis. Etiam porta est eu pulvinar dictum. Cras fringilla molestie lorem, sit amet imperdiet tortor
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ex vitae cursus commodo. Fusce non augue sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce molestie varius diam, ut pellentesque nibh feugiat hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed maximus vestibulum turpis, et commodo purus fermentum vitae. Proin facilisis nunc et tortor mattis commodo. Aenean rutrum sollicitudin sodales. Fusce feugiat massa diam, eu tristique ipsum tristique eu. Duis vestibulum nibh elementum odio efficitur semper. In ultricies auctor mi, a eleifend purus scelerisque sed. Nulla rhoncus risus tortor, fermentum luctus tortor pretium sit amet.Aliquam tempor tincidunt rutrum. Proin dictum tempor odio eu lobortis. Etiam porta est eu pulvinar dictum. Cras fringilla molestie lorem, sit amet imperdiet tortor
-                                    </p>
+                                    <h4 class='page-header'>Profile</h4>
+                                    <p><?php echo $character[7]; ?></p>
                                 </div>
                             </div>
                         </div>

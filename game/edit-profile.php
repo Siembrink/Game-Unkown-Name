@@ -2,6 +2,8 @@
 include ("../includes/config.php");
 include ("includes/functions.php");
 loggedIn($_SESSION['name']);
+$character = selectPlayer($connection_world, $_SESSION['name']);
+$text = $character[7];
 ?>
 <html>
     <head>
@@ -41,15 +43,42 @@ loggedIn($_SESSION['name']);
                                 </ul>
                             </div>
                             <div class="panel-body">
-                                <form method="post">
-                                    <label>To :</label> <input class="form-control" type="text" maxlength="15" name="to"/><br />
-                                    <label>Subject :</label> <input class="form-control" type='text' maxlength='15' name='subject'/><br />
-                                    <label>Message :</label> <textarea class="form-control" name="message" /> </textarea><br />
-                                    <input class='btn btn-primary' type="submit" name="send" value="Send" />
+                                <form method="post" enctype="multipart/form-data">
+                                    <h4 class='page-header'>Upload avatar</h4>
+                                    <label>Avatar :</label> <input class="form-control" type='file' name='avatar' /><br />
+                                    <input class='btn btn-primary' type="submit" name="upload" value="Upload" />
                                     <input class='btn btn-danger' type="reset" value="Reset" /> <br />
                                 </form>
+                                <?php
+                                ?>
+                                <form method='post'>
+                                    <h4 class='page-header'>Update profile</h4>
+                                    <textarea name='profile_text' rows="10" cols="100" ><?php echo $text; ?> </textarea> <br /><br />
+                                    <input class='btn btn-primary' type="submit" name="update" value="Update" />
+                                    <input class='btn btn-danger' type="reset" value="Reset" /> <br />
+                                </form>
+                                <?php
+                                if (isset($_POST['update'])) {
+                                    if (empty($_POST['profile_text'])) {
+                                        echo '<br /><div class="alert alert-danger" role="alert">Oops! Something is going wrong..</div>';
+                                    } else {
+                                        $text = mysqli_real_escape_string($connection_world, $_POST['profile_text']);
+
+                                        $update = mysqli_prepare($connection_world, "UPDATE player SET profile_text = ? WHERE player_name = ?");
+                                        mysqli_stmt_bind_param($update, "ss", $text, $_SESSION['name']);
+                                        mysqli_stmt_execute($update);
+
+                                        if ($update) {
+                                            echo '<div class="alert alert-success" role="alert">Profile updated!</div>';
+                                        } else {
+                                            echo '<div class="alert alert-danger" role="alert">Oops! Something is going wrong..</div>';
+                                        }
+                                    }
+                                }
+                                ?>
                             </div>
-                            <div class='panel-footer'>Account Management</div>
+
+                            <div class = 'panel-footer'>Account Management</div>
                         </div>
                     </div>
                     <?php

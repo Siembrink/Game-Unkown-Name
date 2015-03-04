@@ -82,3 +82,11 @@ function setUserWealth($money) {
         return "Extremly Rich";
     }
 }
+
+function checkUserCrime($connection, $crime) {
+    // check if user can do the crime again
+    // Normal Crime : wait 2 min
+    // Org. Crime : wait 15 min
+    // Car stealing : wait 5 min
+    // Bank Rob : wait 30 min
+}

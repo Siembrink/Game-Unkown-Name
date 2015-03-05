@@ -1,7 +1,7 @@
 # Game-Unkown-Name
 This project has no name and isnt a game yet.
 
-# Features :
+Features :
   - Flexible for mobile, tablet and most PC browsers
   - Menu's are flexible.
   - Message system
@@ -10,14 +10,14 @@ This project has no name and isnt a game yet.
   - Users have there own profile and can watch others profiles
   - News sytem.
   
-# Known things to do (planning):
+Known things to do (planning):
   - Family system
   - Edit profile
   - Account settings
   - Crimes
   - Frontpage Design
 
-# Known bugs:
+Known bugs:
   - Memberlist status bug;
   - Profile status bug;
 

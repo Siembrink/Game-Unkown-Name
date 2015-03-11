@@ -74,86 +74,133 @@ $online = usersOnline($connection_world);
                             </div>
                             <?php
                             if (isset($_POST['submit'])) {
-                                $crime = mysqli_real_escape_string($connection_world, $_POST['crime']);
-                                if ($crime == "1") {
-                                    echo '<br /><br /><div class="alert alert-info" role="alert">Trying to steal the child his lunch money.. </div><br />';
-                                    $percent = rand(1, 4);
-                                    $succes = rand(1, 4);
-                                    if ($succes < $percent) {
-                                        $jail = rand(1, 5);
 
-                                        if ($jail > 2) {
-                                            echo '<div class="alert alert-danger" role="alert">There was an officer around the corner and he caught you.. Now you\'re in jail for 5 minutes.<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
-                                        } else {
-                                            echo '<div class="alert alert-danger" role="alert">There was an officer around the corner but you show them that you can run fast and got away safetly!<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
-                                        }
-                                    } else {
-                                        $money = rand(10, 50);
-                                        echo '<div class="alert alert-success" role="alert">Succes! The child had a total of ' . $money . ' as lunch money! Good job.<span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>';
-                                    }
-                                } else if ($crime == "2") {
-                                    echo '<br /><br /><div class="alert alert-info" role="alert">Trying to steal a women her purse.. </div><br />';
-                                    $percent = rand(1, 5);
-                                    $succes = rand(1, 5);
-                                    if ($succes < $percent) {
-                                        $jail = rand(1, 5);
-
-                                        if ($jail > 3) {
-                                            echo '<div class="alert alert-danger" role="alert">The women was an officer, and she arrested you.<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
-                                        } else {
-                                            echo '<div class="alert alert-danger" role="alert">Dude.. you got rekt by a women!<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
-                                        }
-                                    } else {
-                                        $money = rand(10, 100);
-                                        echo '<div class="alert alert-success" role="alert">Succes! The women had a total amount of ' . $money . ' in her purse. Good job!<span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>';
-                                    }
-                                } else if ($crime == "3") {
-                                    echo '<br /><br /><div class="alert alert-info" role="alert">Trying to rob a local liguor store..</div><br />';
-                                    $percent = rand(1, 10);
-                                    $succes = rand(1, 10);
-                                    if ($succes < $percent) {
-                                        $jail = rand(1, 5);
-
-                                        if ($jail > 4) {
-                                            echo '<div class="alert alert-danger" role="alert">The police was to quick for you when the alarm got off. Jail time it is.<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
-                                        } else {
-                                            echo '<div class="alert alert-danger" role="alert">The alarm did go off sadly, but luckily you manage to escape!<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
-                                        }
-                                    } else {
-                                        $money = rand(100, 500);
-                                        echo '<div class="alert alert-success" role="alert">Succes! The liguor store had a total amount of ' . $money . ' in the safe! Good job.<span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>';
-                                    }
-                                } else if ($crime == "4") {
-                                    echo '<br /><br /><div class="alert alert-info" role="alert">Trying to steal the furniture from your own neighbour..</div><br />';
-                                    $percent = rand(1, 20);
-                                    $succes = rand(1, 20);
-                                    if ($succes < $percent) {
-                                        $jail = rand(1, 5);
-
-                                        if ($jail > 4) {
-                                            echo '<div class="alert alert-danger" role="alert">The neighbour was still at home and captured you. He called the police and now you\'re in jail.<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
-                                        } else {
-                                            echo '<div class="alert alert-danger" role="alert">The nieghbour was sick at home. Lucky for you he didnt saw you!<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
-                                        }
-                                    } else {
-                                        $money = rand(250, 1000);
-                                        echo '<div class="alert alert-success" role="alert">Succes! You took the television of the neighbour and sold it for ' . $money . '! Good job.<span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>';
-                                    }
+                                $crime1 = "crime1";
+                                $cooldown = date('Y-m-d H:i:s', strtotime("+5 min"));
+                                $now_time = date("Y-m-d H:i:s");
+                                $time = checkCrime($connection_world, $crime1, $_SESSION['name']);
+                                $jail = checkJail($connection_world, $_SESSION['name']);
+                                if ($now_time < $time || $now_time < $jail) {
+                                    echo '<br /><br /><div class="alert alert-danger" role="alert">You have to wait 5 minutes untill you can try do a crime again. Or you are still in jail.</div><br />';
                                 } else {
-                                    echo '<br /><br /><div class="alert alert-info" role="alert">Trying to rob a small bank..</div><br />';
-                                    $percent = rand(1, 50);
-                                    $succes = rand(1, 50);
-                                    if ($succes < $percent) {
-                                        $jail = rand(1, 5);
+                                    $crime = mysqli_real_escape_string($connection_world, $_POST['crime']);
 
-                                        if ($jail > 4) {
-                                            echo '<div class="alert alert-danger" role="alert">An officer was guarding the bank, the moment you took out your gun he captured you and now its jail time. Again.<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+
+                                    if ($crime == "1") {
+                                        echo '<br /><br /><div class="alert alert-info" role="alert">Trying to steal the child his lunch money.. </div><br />';
+                                        $percent = rand(1, 4);
+                                        $succes = rand(1, 4);
+                                        if ($succes < $percent) {
+                                            $jail = rand(1, 5);
+
+                                            if ($jail > 2) {
+                                                echo '<div class="alert alert-danger" role="alert">There was an officer around the corner and he caught you.. Now you\'re in jail for 5 minutes.<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+                                                doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                                goToJail($connection_world, $cooldown, $_SESSION['name']);
+                                            } else {
+                                                echo '<div class="alert alert-danger" role="alert">There was an officer around the corner but you show them that you can run fast and got away safetly!<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+                                                doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                            }
                                         } else {
-                                            echo '<div class="alert alert-danger" role="alert">An officer was guarding the bank, the moment you saw him you left the bank. Smart choice.<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+                                            $money = rand(10, 50);
+                                            echo '<div class="alert alert-success" role="alert">Succes! The child had a total of ' . $money . ' as lunch money! Good job.<span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>';
+                                            $currmoney = currMoney($connection_world, $_SESSION['name']);
+                                            $money = $money + $currmoney;
+                                            addMoney($connection_world, $money, $_SESSION['name']);
+                                            doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                        }
+                                    } else if ($crime == "2") {
+                                        echo '<br /><br /><div class="alert alert-info" role="alert">Trying to steal a women her purse.. </div><br />';
+                                        $percent = rand(1, 5);
+                                        $succes = rand(1, 5);
+                                        if ($succes < $percent) {
+                                            $jail = rand(1, 5);
+
+                                            if ($jail > 3) {
+                                                echo '<div class="alert alert-danger" role="alert">The women was an officer, and she arrested you.<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+                                                doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                                goToJail($connection_world, $cooldown, $_SESSION['name']);
+                                            } else {
+                                                echo '<div class="alert alert-danger" role="alert">Dude.. you got rekt by a women!<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+                                                doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                            }
+                                        } else {
+                                            $money = rand(10, 100);
+                                            echo '<div class="alert alert-success" role="alert">Succes! The women had a total amount of ' . $money . ' in her purse. Good job!<span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>';
+                                            $currmoney = currMoney($connection_world, $_SESSION['name']);
+                                            $money = $money + $currmoney;
+                                            addMoney($connection_world, $money, $_SESSION['name']);
+                                            doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                        }
+                                    } else if ($crime == "3") {
+                                        echo '<br /><br /><div class="alert alert-info" role="alert">Trying to rob a local liguor store..</div><br />';
+                                        $percent = rand(1, 10);
+                                        $succes = rand(1, 10);
+                                        if ($succes < $percent) {
+                                            $jail = rand(1, 5);
+
+                                            if ($jail > 4) {
+                                                echo '<div class="alert alert-danger" role="alert">The police was to quick for you when the alarm got off. Jail time it is.<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+                                                doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                                goToJail($connection_world, $cooldown, $_SESSION['name']);
+                                            } else {
+                                                echo '<div class="alert alert-danger" role="alert">The alarm did go off sadly, but luckily you manage to escape!<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+                                                doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                            }
+                                        } else {
+                                            $money = rand(100, 500);
+                                            echo '<div class="alert alert-success" role="alert">Succes! The liguor store had a total amount of ' . $money . ' in the safe! Good job.<span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>';
+                                            $currmoney = currMoney($connection_world, $_SESSION['name']);
+                                            $money = $money + $currmoney;
+                                            addMoney($connection_world, $money, $_SESSION['name']);
+                                            doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                        }
+                                    } else if ($crime == "4") {
+                                        echo '<br /><br /><div class="alert alert-info" role="alert">Trying to steal the furniture from your own neighbour..</div><br />';
+                                        $percent = rand(1, 20);
+                                        $succes = rand(1, 20);
+                                        if ($succes < $percent) {
+                                            $jail = rand(1, 5);
+
+                                            if ($jail > 4) {
+                                                echo '<div class="alert alert-danger" role="alert">The neighbour was still at home and captured you. He called the police and now you\'re in jail.<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+                                                doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                                goToJail($connection_world, $cooldown, $_SESSION['name']);
+                                            } else {
+                                                echo '<div class="alert alert-danger" role="alert">The nieghbour was sick at home. Lucky for you he didnt saw you!<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+                                                doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                            }
+                                        } else {
+                                            $money = rand(250, 1000);
+                                            echo '<div class="alert alert-success" role="alert">Succes! You took the television of the neighbour and sold it for ' . $money . '! Good job.<span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>';
+                                            $currmoney = currMoney($connection_world, $_SESSION['name']);
+                                            $money = $money + $currmoney;
+                                            addMoney($connection_world, $money, $_SESSION['name']);
+                                            doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
                                         }
                                     } else {
-                                        $money = rand(5000, 50000);
-                                        echo '<div class="alert alert-success" role="alert">Succes! The bank had a total amount of ' . $money . ' in the safe! Good job.<span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>';
+                                        echo '<br /><br /><div class="alert alert-info" role="alert">Trying to rob a small bank..</div><br />';
+                                        $percent = rand(1, 50);
+                                        $succes = rand(1, 50);
+                                        if ($succes < $percent) {
+                                            $jail = rand(1, 5);
+
+                                            if ($jail > 4) {
+                                                echo '<div class="alert alert-danger" role="alert">An officer was guarding the bank, the moment you took out your gun he captured you and now its jail time. Again.<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+                                                doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                                goToJail($connection_world, $cooldown, $_SESSION['name']);
+                                            } else {
+                                                echo '<div class="alert alert-danger" role="alert">An officer was guarding the bank, the moment you saw him you left the bank. Smart choice.<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+                                                doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                            }
+                                        } else {
+                                            $money = rand(5000, 50000);
+                                            echo '<div class="alert alert-success" role="alert">Succes! The bank had a total amount of ' . $money . ' in the safe! Good job.<span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>';
+                                            $currmoney = currMoney($connection_world, $_SESSION['name']);
+                                            $money = $money + $currmoney;
+                                            addMoney($connection_world, $money, $_SESSION['name']);
+                                            doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                        }
                                     }
                                 }
                             }

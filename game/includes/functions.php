@@ -83,10 +83,60 @@ function setUserWealth($money) {
     }
 }
 
+function goToJail($connection, $time, $name) {
+    $update = mysqli_prepare($connection, "UPDATE player SET jail = ? WHERE `player_name` = ?");
+    mysqli_stmt_bind_param($update, "ss", $time, $name);
+    mysqli_execute($update);
+}
+
+function checkJail($connection, $name) {
+    $connection = mysqli_connect('localhost', 'root', '', 'maffia_beta');
+    $select = mysqli_prepare($connection, "SELECT jail FROM `player` WHERE `player_name` = ?");
+    mysqli_stmt_bind_param($select, "s", $name);
+    mysqli_execute($select);
+    mysqli_stmt_bind_result($select, $time2);
+    mysqli_stmt_fetch($select);
+    return $time2;
+}
+
+function checkCrime($connection, $crime, $name) {
+    $select = mysqli_prepare($connection, "SELECT crime1 FROM `player` WHERE player_name = ?");
+    mysqli_stmt_bind_param($select, "s", $name);
+    mysqli_execute($select);
+    mysqli_stmt_bind_result($select, $time2);
+    mysqli_stmt_fetch($select);
+    return $time2;
+}
+
+function doCrime($connection, $crime, $time, $name) {
+    if ($crime = "crime1") {
+        $update = mysqli_prepare($connection, "UPDATE player SET crime1 = ? WHERE `player_name` = ?");
+        mysqli_stmt_bind_param($update, "ss", $time, $name);
+        mysqli_execute($update);
+    } else if ($crime = "crime2") {
+
+    }
+}
+
 function checkUserCrime($connection, $crime) {
     // check if user can do the crime again
     // Normal Crime : wait 2 min
     // Org. Crime : wait 15 min
     // Car stealing : wait 5 min
     // Bank Rob : wait 30 min
+}
+
+function currMoney($connection, $name) {
+    $select = mysqli_prepare($connection, "SELECT `money` FROM `player` WHERE `player_name` = ?");
+    mysqli_stmt_bind_param($select, "s", $name);
+    mysqli_execute($select);
+    mysqli_stmt_bind_result($select, $money_data);
+    mysqli_stmt_fetch($select);
+    return $money_data;
+}
+
+function addMoney($connection, $money, $name) {
+    $update = mysqli_prepare($connection, "UPDATE player SET money = ? WHERE player_name = ?");
+    mysqli_stmt_bind_param($update, "is", $money, $name);
+    mysqli_execute($update);
 }

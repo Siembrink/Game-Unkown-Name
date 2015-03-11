@@ -23,6 +23,12 @@ $money = setUserWealth($character[4]);
             if ($message > 0) {
                 echo '<div class="alert alert-info" role="alert">You have a new message! <a href="messages.php">Check it now!</a></div>';
             }
+            $now_time = date("Y-m-d H:i:s");
+
+            $jail = checkJail($connection_world, $_SESSION['name']);
+            if ($now_time < $jail) {
+                echo '<div class="alert alert-danger" role="alert">You\'re still in jail untill!</div>';
+            }
             ?>
 
             <div class="panel panel-warning">

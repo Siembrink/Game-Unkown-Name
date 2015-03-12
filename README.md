@@ -18,8 +18,9 @@ Known things to do (planning):
   - Frontpage Design
 
 Known bugs:
-  - Memberlist status bug;
-  - Profile status bug;
+  - Memberlist status bug; [FIXED]
+  - Profile status bug; [FIXED]
+  - Jail time; [FIXED]
 
 Game is going to be featuring far more things. But they will be planned whenever i've finished the things above. ReadMe will be updated weekly.
 

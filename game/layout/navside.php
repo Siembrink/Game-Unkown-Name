@@ -63,7 +63,7 @@
                         <ul class = "nav nav-sidebar">
                             <ul class = "nav nav-pills nav-stacked">
                                 <li><a href="/maffia/game/shop.php">Weapon / Armor Shop</a></li>
-                                <li><a href="#">Bullet Factory</a></li>
+                                <li><a href="/maffia/game/factory.php">Bullet Factory</a></li>
                                 <li><a href="/maffia/game/jail.php">Jail</a></li>
                                 <li><a href="#">Casino</a></li>
                             </ul>

@@ -68,7 +68,12 @@ $online = usersOnline($connection_world);
                                     echo '<td>#' . $i . '</td>';
                                     echo '<td>' . $name . '</td>';
                                     echo '<td>' . $rank . '</td>';
-                                    echo '<td>' . isUserOnline($connection_world, $name) . '</td>';
+                                    if ($online == 0) {
+                                        echo '<td><span class="label label-danger">Offline</span></td>';
+                                    } else {
+                                        echo '<td><span class="label label-success">Online</span></td>';
+                                    }
+                                    ;
                                     echo'<input type="hidden" name="profile-name" value="' . $name . '">';
                                     echo '<td><input type="submit" class="btn btn-primary" name="profile" value="' . $name . '\'s profile"></td>';
                                     echo '</form>';

@@ -93,6 +93,15 @@ include("includes/config.php");
                 </div>
             </div>
 
+            <div class="navbar navbar-inverse navbar-bottom">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        credits
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     </body>
 </html>

@@ -47,32 +47,32 @@ $online = usersOnline($connection_world);
 
                     <div class="col-sm-6">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><h4>Prison</h4></div>
+                            <div class="panel-heading"><h4>Bullet Factory</h4></div>
                             <p class="page-header" style="padding: 20 30 20 20px;">
-                                These people are in jail for commiting crimes. Please do not feed these people since they are dangerous.
+                                Welcome to the bullet factory were you can buy bullets to demolish your enemy's or help your friends. Every hour the factory produces a specific amount of bullets. The owner is a clever men. Whenever the factory is almost sold out the owner will ask more money for each bullet you buy.
                             </p>
                             <div class="panel-body">
+                                <div class='col-sm-3 col-md-8'>saba</div>
+                                <div class='col-sm-3 col-md-4'>
+                                    <div class='panel panel-info'>
+                                        <div class='panel-heading'>Statistics</div>
+                                        <div class='panel-body'>
+                                            <table class="table">
+                                                <tr>
+                                                    <td>Cost:</td>
+                                                    <td>111</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>:</td>
+                                                    <td>111</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
 
-                                <?php
-                                $now_time = date("Y-m-d H:i:s");
 
-                                $query = mysqli_query($connection_world, "SELECT player_name, jail, family FROM player ");
-                                echo '<table class="table">';
-                                echo '<thead><th>Name</th><th>Untill</th><th>Family</th></thead>';
-                                while ($row = mysqli_fetch_row($query)) {
-                                    if ($now_time > $row[1]) {
+                                </div>
 
-                                    } else {
-                                        echo '<tr>';
-
-                                        echo '<td>' . $row[0] . '</td>';
-                                        echo '<td>' . $row[1] . '</td>';
-                                        echo '<td>' . $row[2] . '</td>';
-                                        echo'</tr>';
-                                    }
-                                }
-                                echo '</table>';
-                                ?>
                             </div>
                         </div>
                     </div>

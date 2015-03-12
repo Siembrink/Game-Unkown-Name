@@ -56,7 +56,7 @@ $online = usersOnline($connection_world);
                                 </ul>
                             </div>
                             <p class="page-header" style="padding: 20 30 20 20px;">
-                                Welcome to the weapon shop! Here you can buy dangerous weapons for you well earned money. 
+                                Welcome to the weapon shop! Here you can buy dangerous weapons for you well earned money. You can only have one weapon at the time. Buy a new weapon and the old will be gone, forever.
                             </p>
                             <div class="panel-body">
 
@@ -71,9 +71,15 @@ $online = usersOnline($connection_world);
                                             echo '<div class="thumbnail">';
                                             echo '<img src="' . $image . '" alt="Weapon">';
                                             echo '<div class="caption">';
-                                            echo '<h3>' . $name . '</h3>';
-                                            echo '<p>Price : ' . $cost . ' Damage : ' . $damage . ' </p>';
+                                            echo '<h3>' . $name . ' </h3>';
+                                            echo '<form method="GET">';
+                                            echo '<input type="hidden" name="weap_name" value="' . $name . '">';
+                                            echo '<input type="hidden" name="cost" value="' . $cost . '">';
+                                            echo '<a href="#" class="btn btn-default" role="button"><span class="glyphicon glyphicon-eur" aria-hidden="true"></span> ' . $cost . ',-</a> ';
+                                            echo '<a href="#" class="btn btn-danger" role="button"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span>' . $damage . '</a></p>';
+                                            echo '<input type="submit" class="btn btn-primary" value="Buy" name="buy"> ';
 
+                                            echo '</form>';
                                             echo '</div>';
                                             echo '</div>';
                                             echo '</div>';

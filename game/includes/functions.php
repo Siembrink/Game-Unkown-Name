@@ -48,9 +48,9 @@ function isUserOnline($connection, $username) {
     $select = mysqli_prepare($connection, "SELECT online FROM player WHERE player_name = ?");
     mysqli_stmt_bind_param($select, "s", $username);
     mysqli_execute($select);
-    mysqli_stmt_bind_result($select, $online);
+    mysqli_stmt_bind_result($select, $online1);
     mysqli_stmt_fetch($select);
-    if ($online = 0) {
+    if ($online1 == 0) {
         return '<span class="label label-danger">Offline</span>';
     } else {
         return '<span class="label label-success">Online</span>';

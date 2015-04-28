@@ -3,6 +3,7 @@ include ("../includes/config.php");
 include ("includes/functions.php");
 loggedIn($_SESSION['name']);
 $world = selectWorldName($connection, 1);
+
 $online = usersOnline($connection_world);
 ?>
 <html>
@@ -72,7 +73,7 @@ $online = usersOnline($connection_world);
                                             echo '<img src="' . $image . '" alt="Weapon">';
                                             echo '<div class="caption">';
                                             echo '<h3>' . $name . ' </h3>';
-                                            echo '<form method="GET">';
+                                            echo '<form method="POST">';
                                             echo '<input type="hidden" name="weap_name" value="' . $name . '">';
                                             echo '<input type="hidden" name="cost" value="' . $cost . '">';
                                             echo '<a href="#" class="btn btn-default" role="button"><span class="glyphicon glyphicon-eur" aria-hidden="true"></span> ' . $cost . ',-</a> ';
@@ -84,10 +85,33 @@ $online = usersOnline($connection_world);
                                             echo '</div>';
                                             echo '</div>';
                                         }
+
+
                                         ?>
 
                                     </div>
+
                                 </div>
+                                <?php
+                                if (isset($_POST['buy'])) {
+                                    $money = currMoney($connection_world, $_SESSION['name']);
+                                    $name = $_SESSION['name'];
+                                    $money = $money - $_POST['cost'];
+                                    if ($money < 0) {
+                                        echo '<div class="alert alert-danger" role="alert">Not enough money!</div>';
+                                    } else {
+
+                                        $weapon = $_POST['weap_name'];
+                                        $update = mysqli_prepare($connection_world, "UPDATE player SET weapon = '$weapon', money = '$money' WHERE player_name = '$name'");
+                                        mysqli_stmt_execute($update);
+                                        if ($update) {
+                                            echo '<div class="alert alert-success" role="alert">Succes!</div>';
+                                        } else {
+                                            echo '<div class="alert alert-danger" role="alert">Oops! something went wrong!</div>div>';
+                                        }
+                                    }
+                                }
+                                ?>
                             </div>
                             <div class='panel-footer'>Weapon Shop</div>
                         </div>

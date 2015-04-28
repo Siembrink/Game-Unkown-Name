@@ -129,7 +129,7 @@ function checkUserCrime($connection, $crime) {
 function currMoney($connection, $name) {
     $select = mysqli_prepare($connection, "SELECT `money` FROM `player` WHERE `player_name` = ?");
     mysqli_stmt_bind_param($select, "s", $name);
-    mysqli_execute($select);
+    mysqli_stmt_execute($select);
     mysqli_stmt_bind_result($select, $money_data);
     mysqli_stmt_fetch($select);
     return $money_data;

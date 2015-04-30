@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d002fc97-926a-4560-a734-ba3d9d3df165" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/admin/logs.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/admin/statistics.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/create_message.php" afterPath="$PROJECT_DIR$/game/create_message.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/factory.php" afterPath="$PROJECT_DIR$/game/factory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/includes/functions.php" afterPath="$PROJECT_DIR$/game/includes/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/admin/index.php" afterPath="$PROJECT_DIR$/game/admin/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maffia.iml" afterPath="$PROJECT_DIR$/maffia.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/messages.php" afterPath="$PROJECT_DIR$/game/messages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/layout/navright.php" afterPath="$PROJECT_DIR$/game/layout/navright.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/shop.php" afterPath="$PROJECT_DIR$/game/shop.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/logout.php" afterPath="$PROJECT_DIR$/game/logout.php" />
     </list>
     <ignored path="maffia.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,32 +28,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/admin/index.php">
+      <file leaf-file-name="logout.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game/logout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.12" vertical-offset="723" max-vertical-offset="1292">
-              <caret line="53" column="83" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logs.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/admin/logs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.92" vertical-offset="591" max-vertical-offset="1292">
-              <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="statistics.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/admin/statistics.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.16" vertical-offset="489" max-vertical-offset="1292">
-              <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
-              <folding />
+            <state vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="238">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <marker date="1430396569933" expanded="true" signature="80:136" placeholder="UPDATE playe..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,84 +43,20 @@
       <file leaf-file-name="account.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-30.6" vertical-offset="153" max-vertical-offset="1309">
-              <caret line="54" column="58" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
+            <state vertical-scroll-proportion="-0.68" vertical-offset="0" max-vertical-offset="1309">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/includes/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.16" vertical-offset="153" max-vertical-offset="2550">
-              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-              <folding>
-                <marker date="1430394579825" expanded="true" signature="95:166" placeholder="SELECT world..world..." />
-                <marker date="1430394579825" expanded="true" signature="476:519" placeholder="SELECT webra..user..." />
-                <marker date="1430394579825" expanded="true" signature="799:912" placeholder="SELECT playe..player..." />
-                <marker date="1430394579825" expanded="true" signature="1293:1345" placeholder="SELECT * FRO..player..." />
-                <marker date="1430394579825" expanded="true" signature="1767:1814" placeholder="SELECT onlin..player..." />
-                <marker date="1430394579825" expanded="true" signature="2261:2310" placeholder="SELECT count..player..." />
-                <marker date="1430394579825" expanded="true" signature="2994:3044" placeholder="UPDATE playe..." />
-                <marker date="1430394579825" expanded="true" signature="3300:3349" placeholder="SELECT jail ..." />
-                <marker date="1430394579825" expanded="true" signature="3629:3678" placeholder="SELECT crime..." />
-                <marker date="1430394579825" expanded="true" signature="3995:4047" placeholder="UPDATE playe..." />
-                <marker date="1430394579825" expanded="true" signature="4502:4554" placeholder="SELECT `mone..." />
-                <marker date="1430394579825" expanded="true" signature="4842:4891" placeholder="UPDATE playe..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navright.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="navright.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game/layout/navright.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.88" vertical-offset="1420" max-vertical-offset="2142">
+            <state vertical-scroll-proportion="2.9420035" vertical-offset="43" max-vertical-offset="2142">
               <caret line="101" column="69" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
               <folding>
                 <marker date="1430394228269" expanded="true" signature="397:462" placeholder="SELECT count..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_message.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/create_message.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.12" vertical-offset="825" max-vertical-offset="1904">
-              <caret line="84" column="68" selection-start-line="84" selection-start-column="68" selection-end-line="84" selection-end-column="68" />
-              <folding>
-                <marker date="1430394703003" expanded="true" signature="4375:4459" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navside.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/layout/navside.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.92" vertical-offset="812" max-vertical-offset="1394">
-              <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messages.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/game/messages.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9103691" vertical-offset="1794" max-vertical-offset="2567">
-              <caret line="136" column="26" selection-start-line="136" selection-start-column="26" selection-end-line="136" selection-end-column="26" />
-              <folding>
-                <marker date="1430395711336" expanded="true" signature="2745:2781" placeholder="SELECT * FRO..message..." />
-                <marker date="1430395711336" expanded="true" signature="6445:6614" placeholder="..." />
-                <marker date="1430395711336" expanded="true" signature="6445:6690" placeholder="..." />
-                <marker date="1430395711336" expanded="true" signature="6520:6600" placeholder="..." />
-                <marker date="1430395711336" expanded="true" signature="6520:6601" placeholder="..." />
-                <marker date="1430395711336" expanded="true" signature="6520:6614" placeholder="..." />
-                <marker date="1430395711336" expanded="true" signature="6694:7082" placeholder="..." />
-                <marker date="1430395711336" expanded="true" signature="7344:7380" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
@@ -184,6 +88,7 @@
         <option value="$PROJECT_DIR$/game/create_message.php" />
         <option value="$PROJECT_DIR$/game/readmessage.php" />
         <option value="$PROJECT_DIR$/game/messages.php" />
+        <option value="$PROJECT_DIR$/game/logout.php" />
       </list>
     </option>
   </component>
@@ -462,18 +367,18 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="2533">
           <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding>
-            <marker date="1430394579825" expanded="true" signature="95:166" placeholder="SELECT world..world..." />
-            <marker date="1430394579825" expanded="true" signature="476:519" placeholder="SELECT webra..user..." />
-            <marker date="1430394579825" expanded="true" signature="799:912" placeholder="SELECT playe..player..." />
-            <marker date="1430394579825" expanded="true" signature="1293:1345" placeholder="SELECT * FRO..player..." />
-            <marker date="1430394579825" expanded="true" signature="1767:1814" placeholder="SELECT onlin..player..." />
-            <marker date="1430394579825" expanded="true" signature="2261:2310" placeholder="SELECT count..player..." />
-            <marker date="1430394579825" expanded="true" signature="2994:3044" placeholder="UPDATE playe..." />
-            <marker date="1430394579825" expanded="true" signature="3300:3349" placeholder="SELECT jail ..." />
-            <marker date="1430394579825" expanded="true" signature="3629:3678" placeholder="SELECT crime..." />
-            <marker date="1430394579825" expanded="true" signature="3995:4047" placeholder="UPDATE playe..." />
-            <marker date="1430394579825" expanded="true" signature="4502:4554" placeholder="SELECT `mone..." />
-            <marker date="1430394579825" expanded="true" signature="4842:4891" placeholder="UPDATE playe..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT world..world..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT webra..user..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT playe..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT onlin..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT count..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT jail ..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT crime..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT `mone..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
           </folding>
         </state>
       </provider>
@@ -516,18 +421,18 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="124" column="32" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
           <folding>
-            <marker date="1430394579825" expanded="true" signature="95:166" placeholder="SELECT world..world..." />
-            <marker date="1430394579825" expanded="true" signature="476:519" placeholder="SELECT webra..user..." />
-            <marker date="1430394579825" expanded="true" signature="799:912" placeholder="SELECT playe..player..." />
-            <marker date="1430394579825" expanded="true" signature="1293:1345" placeholder="SELECT * FRO..player..." />
-            <marker date="1430394579825" expanded="true" signature="1767:1814" placeholder="SELECT onlin..player..." />
-            <marker date="1430394579825" expanded="true" signature="2261:2310" placeholder="SELECT count..player..." />
-            <marker date="1430394579825" expanded="true" signature="2994:3044" placeholder="UPDATE playe..." />
-            <marker date="1430394579825" expanded="true" signature="3300:3349" placeholder="SELECT jail ..." />
-            <marker date="1430394579825" expanded="true" signature="3629:3678" placeholder="SELECT crime..." />
-            <marker date="1430394579825" expanded="true" signature="3995:4047" placeholder="UPDATE playe..." />
-            <marker date="1430394579825" expanded="true" signature="4502:4554" placeholder="SELECT `mone..." />
-            <marker date="1430394579825" expanded="true" signature="4842:4891" placeholder="UPDATE playe..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT world..world..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT webra..user..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT playe..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT onlin..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT count..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT jail ..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT crime..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT `mone..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
           </folding>
         </state>
       </provider>
@@ -569,18 +474,18 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="124" column="32" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
           <folding>
-            <marker date="1430394579825" expanded="true" signature="95:166" placeholder="SELECT world..world..." />
-            <marker date="1430394579825" expanded="true" signature="476:519" placeholder="SELECT webra..user..." />
-            <marker date="1430394579825" expanded="true" signature="799:912" placeholder="SELECT playe..player..." />
-            <marker date="1430394579825" expanded="true" signature="1293:1345" placeholder="SELECT * FRO..player..." />
-            <marker date="1430394579825" expanded="true" signature="1767:1814" placeholder="SELECT onlin..player..." />
-            <marker date="1430394579825" expanded="true" signature="2261:2310" placeholder="SELECT count..player..." />
-            <marker date="1430394579825" expanded="true" signature="2994:3044" placeholder="UPDATE playe..." />
-            <marker date="1430394579825" expanded="true" signature="3300:3349" placeholder="SELECT jail ..." />
-            <marker date="1430394579825" expanded="true" signature="3629:3678" placeholder="SELECT crime..." />
-            <marker date="1430394579825" expanded="true" signature="3995:4047" placeholder="UPDATE playe..." />
-            <marker date="1430394579825" expanded="true" signature="4502:4554" placeholder="SELECT `mone..." />
-            <marker date="1430394579825" expanded="true" signature="4842:4891" placeholder="UPDATE playe..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT world..world..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT webra..user..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT playe..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT onlin..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT count..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT jail ..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT crime..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT `mone..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
           </folding>
         </state>
       </provider>
@@ -676,33 +581,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/layout/navright.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.88" vertical-offset="1420" max-vertical-offset="2142">
-          <caret line="101" column="69" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
-          <folding>
-            <marker date="1430394228269" expanded="true" signature="397:462" placeholder="SELECT count..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game/includes/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.16" vertical-offset="153" max-vertical-offset="2550">
           <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
           <folding>
-            <marker date="1430394579825" expanded="true" signature="95:166" placeholder="SELECT world..world..." />
-            <marker date="1430394579825" expanded="true" signature="476:519" placeholder="SELECT webra..user..." />
-            <marker date="1430394579825" expanded="true" signature="799:912" placeholder="SELECT playe..player..." />
-            <marker date="1430394579825" expanded="true" signature="1293:1345" placeholder="SELECT * FRO..player..." />
-            <marker date="1430394579825" expanded="true" signature="1767:1814" placeholder="SELECT onlin..player..." />
-            <marker date="1430394579825" expanded="true" signature="2261:2310" placeholder="SELECT count..player..." />
-            <marker date="1430394579825" expanded="true" signature="2994:3044" placeholder="UPDATE playe..." />
-            <marker date="1430394579825" expanded="true" signature="3300:3349" placeholder="SELECT jail ..." />
-            <marker date="1430394579825" expanded="true" signature="3629:3678" placeholder="SELECT crime..." />
-            <marker date="1430394579825" expanded="true" signature="3995:4047" placeholder="UPDATE playe..." />
-            <marker date="1430394579825" expanded="true" signature="4502:4554" placeholder="SELECT `mone..." />
-            <marker date="1430394579825" expanded="true" signature="4842:4891" placeholder="UPDATE playe..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT world..world..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT webra..user..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT playe..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT onlin..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT count..player..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT jail ..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT crime..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="SELECT `mone..." />
+            <marker date="1430394579825" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
           </folding>
         </state>
       </provider>
@@ -710,20 +605,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.6" vertical-offset="153" max-vertical-offset="1309">
-          <caret line="54" column="58" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game/create_message.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.12" vertical-offset="825" max-vertical-offset="1904">
           <caret line="84" column="68" selection-start-line="84" selection-start-column="68" selection-end-line="84" selection-end-column="68" />
           <folding>
-            <marker date="1430394703003" expanded="true" signature="4375:4459" placeholder="INSERT INTO ..." />
+            <marker date="1430394703003" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -741,14 +628,42 @@
         <state vertical-scroll-proportion="0.9103691" vertical-offset="1794" max-vertical-offset="2567">
           <caret line="136" column="26" selection-start-line="136" selection-start-column="26" selection-end-line="136" selection-end-column="26" />
           <folding>
-            <marker date="1430395711336" expanded="true" signature="2745:2781" placeholder="SELECT * FRO..message..." />
-            <marker date="1430395711336" expanded="true" signature="6445:6614" placeholder="..." />
-            <marker date="1430395711336" expanded="true" signature="6445:6690" placeholder="..." />
-            <marker date="1430395711336" expanded="true" signature="6520:6600" placeholder="..." />
-            <marker date="1430395711336" expanded="true" signature="6520:6601" placeholder="..." />
-            <marker date="1430395711336" expanded="true" signature="6520:6614" placeholder="..." />
-            <marker date="1430395711336" expanded="true" signature="6694:7082" placeholder="..." />
-            <marker date="1430395711336" expanded="true" signature="7344:7380" placeholder="DELETE FROM ..." />
+            <marker date="1430395711336" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..message..." />
+            <marker date="1430395711336" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430395711336" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430395711336" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430395711336" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430395711336" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430395711336" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430395711336" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.68" vertical-offset="0" max-vertical-offset="1309">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="238">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1430396569933" expanded="true" signature="80:136" placeholder="UPDATE playe..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/layout/navright.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.9420035" vertical-offset="43" max-vertical-offset="2142">
+          <caret line="101" column="69" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
+          <folding>
+            <marker date="1430394228269" expanded="true" signature="397:462" placeholder="SELECT count..." />
           </folding>
         </state>
       </provider>

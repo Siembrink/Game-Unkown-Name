@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Gegenereerd op: 29 apr 2015 om 08:23
+-- Gegenereerd op: 30 apr 2015 om 14:10
 -- Serverversie: 5.6.21
 -- PHP-versie: 5.6.3
 
@@ -45,6 +45,26 @@ INSERT INTO `armor_shop` (`id`, `armor_name`, `cost`, `armor`, `images`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Tabelstructuur voor tabel `factory`
+--
+
+CREATE TABLE IF NOT EXISTS `factory` (
+`id` int(11) NOT NULL,
+  `bullets` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `sold` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `factory`
+--
+
+INSERT INTO `factory` (`id`, `bullets`, `price`, `sold`) VALUES
+(1, 9976, 200, 12);
+
+-- --------------------------------------------------------
+
+--
 -- Tabelstructuur voor tabel `message`
 --
 
@@ -56,7 +76,16 @@ CREATE TABLE IF NOT EXISTS `message` (
   `read` int(1) NOT NULL DEFAULT '0',
   `message` text NOT NULL,
   `subject` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `message`
+--
+
+INSERT INTO `message` (`id`, `from`, `to`, `date`, `read`, `message`, `subject`) VALUES
+(1, 'admin', 'Simon', '30/04/2015 01:50', 1, 'hoih ', 'hoih'),
+(2, 'Simon', 'admin', '30/04/2015 01:51', 1, 'hiohsdf ', 'hioh'),
+(3, 'Simon', 'admin', '30/04/2015 01:51', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ex vitae cursus commodo. Fusce non augue sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce molestie varius diam, ut pellentesque nibh feugiat hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed maximus vestibulum turpis, et commodo purus fermentum vitae. Proin facilisis nunc et tortor mattis commodo. Aenean rutrum sollicitudin sodales. Fusce feugiat massa diam, eu tristique ipsum tristique eu. Duis vestibulum nibh elementum odio efficitur semper. In ultricies auctor mi, a eleifend purus scelerisque sed. Nulla rhoncus risus tortor, fermentum luctus tortor pretium sit amet.Aliquam tempor tincidunt rutrum. Proin dictum tempor odio eu lobortis. Etiam porta est eu pulvinar dictum. Cras fringilla molestie lorem, sit amet imperdiet tortor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ex vitae cursus commodo. Fusce non augue sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce molestie varius diam, ut pellentesque nibh feugiat hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed maximus vestibulum turpis, et commodo purus fermentum vitae. Proin facilisis nunc et tortor mattis commodo. Aenean r', 'hiohddd');
 
 -- --------------------------------------------------------
 
@@ -90,8 +119,8 @@ CREATE TABLE IF NOT EXISTS `player` (
 --
 
 INSERT INTO `player` (`id`, `player_name`, `rank`, `progress`, `family`, `money`, `banned`, `online`, `avatar`, `profile_text`, `crime1`, `crime2`, `crime3`, `crime4`, `weapon`, `armor`, `bullets`, `jail`) VALUES
-(5, 'admin', 'Rookie', 0, 'Staff', 48024, 0, 1, 'images/avatar/maffia_avatar.jpg', 'hoi HJOHDf dsdf', '2015-04-28 15:25:46', '0', '0', '0', 'AK-47', 'Shield', 0, '2015-04-28 15:25:46'),
-(6, 'Simon', 'Rookie', 0, 'None', 49424, 0, 0, 'images/avatar/maffia_avatar.jpg', '', '0', '0', '0', '0', '', '', 0, '2015-03-12 14:55:40');
+(5, 'admin', 'Rookie', 0, 'Staff', 25724, 0, 1, 'images/avatar/maffia_avatar.jpg', 'hoi HJOHDf dsdf dfasdfdfa', '2015-04-29 10:55:27', '0', '0', '0', 'MP-7', 'Shield', 0, '2015-04-28 15:25:46'),
+(6, 'Simon', 'Rookie', 0, 'None', 25724, 0, 1, 'images/avatar/maffia_avatar.jpg', '', '0', '0', '0', '0', '', '', 0, '2015-03-12 14:55:40');
 
 -- --------------------------------------------------------
 
@@ -130,6 +159,12 @@ ALTER TABLE `armor_shop`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indexen voor tabel `factory`
+--
+ALTER TABLE `factory`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexen voor tabel `message`
 --
 ALTER TABLE `message`
@@ -157,10 +192,15 @@ ALTER TABLE `weapon_shop`
 ALTER TABLE `armor_shop`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
+-- AUTO_INCREMENT voor een tabel `factory`
+--
+ALTER TABLE `factory`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT voor een tabel `message`
 --
 ALTER TABLE `message`
-MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(4) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT voor een tabel `player`
 --

@@ -57,7 +57,7 @@ $online = usersOnline($connection_world);
                                 </ul>
                             </div>
                             <p class="page-header" style="padding: 20 30 20 20px;">
-                                Welcome to the weapon shop! Here you can buy dangerous weapons for you well earned money. You can only have one weapon at the time. Buy a new weapon and the old will be gone, forever.
+                               HalloWelcome to the weapon shop! Here you can buy dangerous weapons for you well earned money. You can only have one weapon at the time. Buy a new weapon and the old will be gone, forever.
                             </p>
                             <div class="panel-body">
 
@@ -70,7 +70,7 @@ $online = usersOnline($connection_world);
                                         while (mysqli_stmt_fetch($shop)) {
                                             echo '<div class="col-sm-3">';
                                             echo '<div class="thumbnail">';
-                                            echo '<img src="' . $image . '" alt="Weapon">';
+                                            echo '<img src="' . $image . '" alt="Weapon width="800" height="400" ">';
                                             echo '<div class="caption">';
                                             echo '<h3>' . $name . ' </h3>';
                                             echo '<form method="POST">';

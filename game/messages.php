@@ -80,8 +80,9 @@ $online = usersOnline($connection_world);
                                         echo '<td>' . $date . '</td>';
                                         echo'<input type="hidden" name="message-id" value="' . $id . '">';
                                         echo'<input type="hidden" name="message" value="' . $message . '">';
+                                        echo'<input type="hidden" name="from" value="'.$from.'">';
 
-                                        echo '<td><input type="submit" class="btn btn-primary" name="read-message" value="Read message"></td>';
+                                        echo '<td><input type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm" name="read-message" value="Read message"></td>';
                                         echo '<td><button type="submit" class="btn btn-danger" name="delete"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>';
                                         echo '';
                                         echo '</form>';
@@ -96,6 +97,7 @@ $online = usersOnline($connection_world);
                                         echo '<td>' . $date . '</td>';
                                         echo'<input type="hidden" name="message-id" value="' . $id . '">';
                                         echo'<input type="hidden" name="message" value="' . $message . '">';
+                                        echo'<input type="hidden" name="from" value="'.$from.'">';
 
                                         echo '<td><input type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"class="btn btn-primary" name="read-message" value="Read message"></td>';
                                         echo '<td><button type="submit" class="btn btn-danger" name="delete"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>';
@@ -106,11 +108,16 @@ $online = usersOnline($connection_world);
                                 echo '</table>';
                                 if (isset($_POST['read-message'])) {
                                     $message = $_POST['message'];
+                                    $from = $_POST['from'];
+                                    echo ' <div class = "panel panel-default">
+                                             <div class = "panel-heading">
+                                             <h3  class = "panel-title">From : '.$from.'</h3></div>
+                                             <div class="panel-body">';
+
+                                    echo '<div class="alert alert-info" role="alert">'.$message.'</div></div></div>';
 
 
-                                    echo "<script type='text/javascript'>$('#myModal').on('shown.bs.modal', function () {
-    $('$message').focus()
-  })alert('$message'); </script>";
+
                                     $read = 1;
                                     $update = mysqli_prepare($connection_world, "UPDATE `message` SET `read` = ? WHERE `id` = ? ");
                                     mysqli_stmt_bind_param($update, "ii", $read, $_POST['message-id']);

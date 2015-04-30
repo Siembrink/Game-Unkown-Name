@@ -47,10 +47,16 @@ $online = usersOnline($connection_world);
 
                     <div class="col-sm-6">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><h4>The story</h4></div>
-                            <div class="panel-body">
-                                <img src="images/maffia_avatar.jpg" alt="Maffia Avatar" align="left" width="200px"/>
+                            <div class="panel-heading">
 
+                                <ul class="nav nav-pills" role="tablist">
+                                    <li role="presentation" class='active'><a href="#">Game Settings</a></li>
+                                    <li role="presentation"><a href="statistics.php">Statistics</a></li>
+                                    <li role="presentation"><a href="logs.php">Logs</a></li>
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <p>Game settings</p>
                             </div>
                         </div>
                     </div>

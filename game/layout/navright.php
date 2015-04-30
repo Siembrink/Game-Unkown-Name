@@ -17,7 +17,7 @@ $money = setUserWealth($character[4]);
             $read = 0;
             $select = mysqli_prepare($connection_world, "SELECT count(`read`) FROM `message` WHERE `to` = ? AND `read` = ?");
             mysqli_stmt_bind_param($select, "si", $name, $read);
-            mysqli_execute($select);
+            mysqli_stmt_execute($select);
             mysqli_stmt_bind_result($select, $message);
             mysqli_stmt_fetch($select);
             if ($message > 0) {
@@ -65,11 +65,11 @@ $money = setUserWealth($character[4]);
                                 <td><?php echo $character[3]; ?></td>
                             </tr>
                             <tr>
-                            <form method="GET" action="profile.php">
+                            <form method="GET" action="/maffia/game/profile.php">
                                 <?php echo'<input type="hidden" name="profile-name" value="' . $character[0] . '">'; ?>
                                 <td> <input type="submit" class="btn btn-primary" name="profile" value="Profile" /> </td>
                             </form>
-                            <form method="POST" action="account.php">
+                            <form method="POST" action="/maffia/game/account.php">
                                 <td> <input type="submit" class="btn btn-primary" name="account" value="Manage account" /> </td>
                             </form>
                             </tr>
@@ -93,6 +93,23 @@ $money = setUserWealth($character[4]);
                 echo '</ul></ul></div></div></div>';
             }
             ?>
+            <div class='panel panel-default'>
+                <div class="panel-heading" >
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        <h3  class = "panel-title">Family</h3>
+                    </a>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="'heading7">
+                    <div class="panel-body">
+                        <ul class="nav nav-sidebar">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="/maffia/game/family.php">Create Family</a></li>
+                                <li><a href="/maffia/game/family_list.php">Family list</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class='panel panel-default'>
                 <div class='panel-heading'>
                     Unkown-game by Siembrink  	&copy; 2015

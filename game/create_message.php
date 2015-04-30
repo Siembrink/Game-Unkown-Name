@@ -74,16 +74,15 @@ $online = usersOnline($connection_world);
                                     $subject = mysqli_real_escape_string($connection_world, $_POST['subject']);
                                     $to = mysqli_real_escape_string($connection_world, $_POST['to']);
                                     $from = $_SESSION['name'];
-
                                     if (doesPlayerExist($connection_world, $to) == false) {
                                         echo '<div class="alert alert-danger" role="alert">Player does not exist!</div>';
-                                    } else if (doesPlayerExist($connection_world, $to) == $_SESSION['name']) {
+                                    } else if ($to == $_SESSION['name']) {
                                         echo '<div class="alert alert-danger" role="alert">You cannot send a message to yourself!</div>';
                                     } else {
 
                                         $insert = mysqli_prepare($connection_world, "INSERT INTO `message`(`from`, `to`, `date`, `message`, `subject`) VALUES (?,?,?,?,?)");
                                         mysqli_stmt_bind_param($insert, "sssss", $from, $to, $date, $message, $subject);
-                                        mysqli_execute($insert);
+                                        mysqli_stmt_execute($insert);
 
                                         if ($insert) {
                                             echo '<div class="alert alert-success" role="alert">Message send!</div>';

@@ -103,7 +103,12 @@ $money = setUserWealth($character[4]);
                     <div class="panel-body">
                         <ul class="nav nav-sidebar">
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="/maffia/game/family.php">Create Family</a></li>
+                                <?php
+                                if (checkFamily($connection_world, $_SESSION['name']) == false) {
+                                    echo '<li><a href="/maffia/game/family.php">Create Family</a></li>';
+                                }
+                                ?>
+
                                 <li><a href="/maffia/game/family_list.php">Family list</a></li>
                             </ul>
                         </ul>

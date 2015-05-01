@@ -139,6 +139,21 @@ function currMoney($connection, $name) {
 function addMoney($connection, $money, $name) {
     $update = mysqli_prepare($connection, "UPDATE player SET money = ? WHERE player_name = ?");
     mysqli_stmt_bind_param($update, "is", $money, $name);
-    mysqli_execute($update);
+    mysqli_stmt_execute($update);
 }
+
+function checkFamily($connection, $username) {
+    $connection = mysqli_connect('localhost', 'root', '', 'maffia_beta');
+    $check = mysqli_prepare($connection, "SELECT family FROM player WHERE player_name = ?");
+    mysqli_stmt_bind_param($check, "s", $username);
+    mysqli_stmt_execute($check);
+    mysqli_stmt_bind_result($check, $family);
+    mysqli_stmt_fetch($check);
+    if ($family == "None") {
+        return false;
+    } else {
+        return true;
+    }
+}
+
 

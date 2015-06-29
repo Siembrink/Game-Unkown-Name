@@ -90,6 +90,7 @@ $money = setUserWealth($character[4]);
                 echo '<ul class="nav nav-sidebar">';
                 echo '<ul class="nav nav-pills nav-stacked">';
                 echo '<li><a href="/maffia/game/admin/index.php">Admin panel</a></li>';
+                echo '<li><a href="/maffia/game/admin/news.php">News panel</a></li>';
                 echo '</ul></ul></div></div></div>';
             }
             ?>

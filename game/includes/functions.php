@@ -155,5 +155,25 @@ function checkFamily($connection, $username) {
         return true;
     }
 }
+function checkRank($connection, $username)
+{
+    $connection = mysqli_connect('localhost', 'root', '', 'maffia_beta');
+    $check = mysqli_prepare($connection, "SELECT rank FROM player WHERE player_name = ?");
+    mysqli_stmt_bind_param($check, "s", $username);
+    mysqli_stmt_execute($check);
+    mysqli_stmt_bind_result($check, $rank);
+    mysqli_stmt_fetch($check);
+    return $rank;
+}
+function searchRank ($connection, $rank)
+{
+    $connection = mysqli_connect('localhost', 'root', '', 'maffia_beta');
+    $search = mysqli_prepare($connection, "Select rank FROM rank WHERE id = ?");
+    mysqli_stmt_bind_param($search, "i", $rank);
+    mysqli_stmt_execute($search);
+    mysqli_stmt_bind_result($search, $name_rank);
+    mysqli_stmt_fetch($search);
+    return $name_rank;
 
+}
 

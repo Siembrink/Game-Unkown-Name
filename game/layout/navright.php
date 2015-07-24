@@ -29,6 +29,9 @@ $money = setUserWealth($character[4]);
             if ($now_time < $jail) {
                 echo '<div class="alert alert-danger" role="alert">You\'re still in jail untill!</div>';
             }
+
+            $rank = checkRank($connection_world, $_SESSION['name']);
+            $rank = searchRank($connection_world, $rank);
             ?>
 
             <div class="panel panel-warning">
@@ -46,11 +49,18 @@ $money = setUserWealth($character[4]);
                             </tr>
                             <tr>
                                 <td>Character rank :</td>
-                                <td><?php echo $character[1]; ?></td>
+                                <td><?php echo $rank; ?></td>
                             </tr>
                             <tr>
                                 <td>Progress :</td>
-                                <td><?php echo $character[2]; ?>%</td>
+                                <td><div class="progress">
+                                        <?php
+                                        echo '<div class="progress-bar" role="progressbar"
+                                             aria-valuemin="0" aria-valuemax="100" style="width:'.$character[2].'%">
+                                            '.$character[2].'%
+                                        </div>';
+                                        ?>
+                                    </div></td>
                             </tr>
                             <tr>
                                 <td>Money rank :</td>

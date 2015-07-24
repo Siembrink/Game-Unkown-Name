@@ -1,6 +1,7 @@
 <?php
 include ("../includes/config.php");
 include ("includes/functions.php");
+include ("includes/exptable.php");
 loggedIn($_SESSION['name']);
 $world = selectWorldName($connection, 1);
 $online = usersOnline($connection_world);
@@ -74,7 +75,7 @@ $online = usersOnline($connection_world);
                             </div>
                             <?php
                             if (isset($_POST['submit'])) {
-
+                                $rank = checkRank($connection_world, $_SESSION['name']);
                                 $crime1 = "crime1";
                                 $cooldown = date('Y-m-d H:i:s', strtotime("+5 min"));
                                 $now_time = date("Y-m-d H:i:s");
@@ -108,6 +109,10 @@ $online = usersOnline($connection_world);
                                             $money = $money + $currmoney;
                                             addMoney($connection_world, $money, $_SESSION['name']);
                                             doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                            $progress = expSimpleCrime($connection_world, $rank, $crime, $_SESSION['name']);
+                                            addExp($connection_world, $_SESSION['name'], $progress);
+
+
                                         }
                                     } else if ($crime == "2") {
                                         echo '<br /><br /><div class="alert alert-info" role="alert">Trying to steal a women her purse.. </div><br />';
@@ -131,6 +136,8 @@ $online = usersOnline($connection_world);
                                             $money = $money + $currmoney;
                                             addMoney($connection_world, $money, $_SESSION['name']);
                                             doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                            $progress = expSimpleCrime($connection_world, $rank, $crime, $_SESSION['name']);
+                                            addExp($connection_world, $_SESSION['name'], $progress);
                                         }
                                     } else if ($crime == "3") {
                                         echo '<br /><br /><div class="alert alert-info" role="alert">Trying to rob a local liguor store..</div><br />';
@@ -154,6 +161,8 @@ $online = usersOnline($connection_world);
                                             $money = $money + $currmoney;
                                             addMoney($connection_world, $money, $_SESSION['name']);
                                             doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                            $progress = expSimpleCrime($connection_world, $rank, $crime, $_SESSION['name']);
+                                            addExp($connection_world, $_SESSION['name'], $progress);
                                         }
                                     } else if ($crime == "4") {
                                         echo '<br /><br /><div class="alert alert-info" role="alert">Trying to steal the furniture from your own neighbour..</div><br />';
@@ -177,6 +186,8 @@ $online = usersOnline($connection_world);
                                             $money = $money + $currmoney;
                                             addMoney($connection_world, $money, $_SESSION['name']);
                                             doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                            $progress = expSimpleCrime($connection_world, $rank, $crime, $_SESSION['name']);
+                                            addExp($connection_world, $_SESSION['name'], $progress);
                                         }
                                     } else {
                                         echo '<br /><br /><div class="alert alert-info" role="alert">Trying to rob a small bank..</div><br />';
@@ -200,6 +211,8 @@ $online = usersOnline($connection_world);
                                             $money = $money + $currmoney;
                                             addMoney($connection_world, $money, $_SESSION['name']);
                                             doCrime($connection_world, $crime1, $cooldown, $_SESSION['name']);
+                                            $progress = expSimpleCrime($connection_world, $rank, $crime, $_SESSION['name']);
+                                            addExp($connection_world, $_SESSION['name'], $progress);
                                         }
                                     }
                                 }

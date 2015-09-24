@@ -27,7 +27,7 @@ $money = setUserWealth($character[4]);
 
             $jail = checkJail($connection_world, $_SESSION['name']);
             if ($now_time < $jail) {
-                echo '<div class="alert alert-danger" role="alert">You\'re still in jail untill!</div>';
+                echo '<div class="alert alert-danger" role="alert">You\'re still in jail.</div>';
             }
 
             $rank = checkRank($connection_world, $_SESSION['name']);
@@ -75,11 +75,11 @@ $money = setUserWealth($character[4]);
                                 <td><?php echo $character[3]; ?></td>
                             </tr>
                             <tr>
-                            <form method="GET" action="/maffia/game/profile.php">
+                            <form method="GET" action="/Game-Unkown-Name/game/profile.php">
                                 <?php echo'<input type="hidden" name="profile-name" value="' . $character[0] . '">'; ?>
                                 <td> <input type="submit" class="btn btn-primary" name="profile" value="Profile" /> </td>
                             </form>
-                            <form method="POST" action="/maffia/game/account.php">
+                            <form method="POST" action="/Game-Unkown-Name/game/account.php">
                                 <td> <input type="submit" class="btn btn-primary" name="account" value="Manage account" /> </td>
                             </form>
                             </tr>
@@ -99,8 +99,8 @@ $money = setUserWealth($character[4]);
                 echo '<div class="panel-body">';
                 echo '<ul class="nav nav-sidebar">';
                 echo '<ul class="nav nav-pills nav-stacked">';
-                echo '<li><a href="/maffia/game/admin/index.php">Admin panel</a></li>';
-                echo '<li><a href="/maffia/game/admin/news.php">News panel</a></li>';
+                echo '<li><a href="/Game-Unkown-Name/game/admin/index.php">Admin panel</a></li>';
+                echo '<li><a href="/Game-Unkown-Name/game/admin/news.php">News panel</a></li>';
                 echo '</ul></ul></div></div></div>';
             }
             ?>
@@ -116,11 +116,11 @@ $money = setUserWealth($character[4]);
                             <ul class="nav nav-pills nav-stacked">
                                 <?php
                                 if (checkFamily($connection_world, $_SESSION['name']) == false) {
-                                    echo '<li><a href="/maffia/game/family.php">Create Family</a></li>';
+                                    echo '<li><a href="/Game-Unkown-Name/game/family.php">Create Family</a></li>';
                                 }
                                 ?>
 
-                                <li><a href="/maffia/game/family_list.php">Family list</a></li>
+                                <li><a href="/Game-Unkown-Name/game/family_list.php">Family list</a></li>
                             </ul>
                         </ul>
                     </div>

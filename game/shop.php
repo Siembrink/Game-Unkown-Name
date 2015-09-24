@@ -57,7 +57,7 @@ $online = usersOnline($connection_world);
                                 </ul>
                             </div>
                             <p class="page-header" style="padding: 20 30 20 20px;">
-                               HalloWelcome to the weapon shop! Here you can buy dangerous weapons for you well earned money. You can only have one weapon at the time. Buy a new weapon and the old will be gone, forever.
+                               Welcome to the weapon shop! Here you can buy dangerous weapons for you well earned money. You can only have one weapon at the time. Buy a new weapon and the old will be gone, forever.
                             </p>
                             <div class="panel-body">
 

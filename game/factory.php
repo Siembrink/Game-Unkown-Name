@@ -94,9 +94,7 @@ $online = usersOnline($connection_world);
                                         </div>
                                     </div>
 
-
-                                </div>
-                                <?php
+                                    <?php
                                 if (isset($_POST['buy'])) {
                                     $value = $_POST['value'];
                                     $name = $_SESSION['name'];
@@ -119,7 +117,7 @@ $online = usersOnline($connection_world);
                                             $update_factory = mysqli_prepare($connection_world, "UPDATE factory SET bullets = '$total_bullets', sold = '$sold' ");
                                             mysqli_stmt_execute($update_factory);
                                             if ($update_factory) {
-                                                echo '<div class="alert alert-success" role="alert">Factory updated</div>';
+                                                echo '<div class="alert alert-success" role="alert">Bullets bought!</div>';
 
                                             }
                                         } else{
@@ -130,6 +128,9 @@ $online = usersOnline($connection_world);
                                     }
                                 }
                                 ?>
+
+                                </div>
+
                             </div>
                         </div>
                     </div>

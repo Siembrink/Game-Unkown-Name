@@ -56,12 +56,12 @@ $online = usersOnline($connection_world);
                                 mysqli_stmt_bind_param($query, "i", $banned);
                                 mysqli_stmt_execute($query);
                                 mysqli_stmt_bind_result($query, $name, $rank, $online);
-
+                                $currentrank = checkRank($connection_world, $_SESSION['name']);
                                 $i = 1;
                                 echo '<table class="table">';
                                 echo '<thead><th>Nr.</th><th>Name</th><th>Rank</th><th>Status</th><th>Profile</th></thead>';
                                 while (mysqli_stmt_fetch($query)) {
-
+                                $rank = searchRank($connection_world, $rank);
                                     echo '<form method="GET" action="profile.php">';
                                     echo '<tr>';
 

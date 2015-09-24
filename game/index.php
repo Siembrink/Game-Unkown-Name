@@ -56,6 +56,20 @@ $online = usersOnline($connection_world);
                                 </p>
                             </div>
                         </div>
+                        <?php
+                        $query = mysqli_query($connection, "SELECT * FROM news ");
+                        while ($row = mysqli_fetch_row($query)) {
+
+                            echo '<div class="panel panel-default">';
+                            echo '<div class="panel-heading">' . $row[1] . '</div>';
+                            echo '<div class="panel-body">';
+                            echo $row[2];
+                            echo '</div>';
+                            echo '<div class="panel-footer">Posted by : ' . $row[3] . '';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                        ?>
                     </div>
                     <?php
                     include ("layout/navright.php");

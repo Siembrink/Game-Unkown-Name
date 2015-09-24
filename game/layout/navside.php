@@ -18,11 +18,11 @@
 
                         <ul class = "nav nav-sidebar">
                             <ul class = "nav nav-pills nav-stacked">
-                                <li><a href = "/maffia/game/index.php">Home</a></li>
-                                <li><a href = "/maffia/game/news.php">News</a></li>
-                                <li><a href = "/maffia/game/faq.php">FAQ</a></li>
-                                <li><a href = "/maffia/game/members.php">Members</a></li>
-                                <li><a href = "/maffia/game/rules.php">Rules</a></li>
+                                <li><a href = "/Game-Unkown-Name/game/index.php">Home</a></li>
+                                <li><a href = "/Game-Unkown-Name/game/news.php">News</a></li>
+                                <li><a href = "/Game-Unkown-Name/game/faq.php">FAQ</a></li>
+                                <li><a href = "/Game-Unkown-Name/game/members.php">Members</a></li>
+                                <li><a href = "/Game-Unkown-Name/game/rules.php">Rules</a></li>
                                 <li><a href = "logout.php">Logout</a></li>
                             </ul>
                         </ul>
@@ -41,9 +41,9 @@
 
                         <ul class = "nav nav-sidebar">
                             <ul class = "nav nav-pills nav-stacked">
-                                <li><a href="/maffia/game/crime.php">Crime</a></li>
+                                <li><a href="/Game-Unkown-Name/game/crime.php">Crime</a></li>
                                 <li><a href="#">Org. Crime</a></li>
-                                <li><a href="#">Car stealing</a></li>
+                                <li><a href="/Game-Unkown-Name/game/carcrime.php">Car stealing</a></li>
                                 <li><a href="#">Bankrob</a></li>
                             </ul>
                         </ul>
@@ -62,9 +62,9 @@
 
                         <ul class = "nav nav-sidebar">
                             <ul class = "nav nav-pills nav-stacked">
-                                <li><a href="/maffia/game/shop.php">Weapon / Armor Shop</a></li>
-                                <li><a href="/maffia/game/factory.php">Bullet Factory</a></li>
-                                <li><a href="/maffia/game/jail.php">Jail</a></li>
+                                <li><a href="/Game-Unkown-Name/game/shop.php">Weapon / Armor Shop</a></li>
+                                <li><a href="/Game-Unkown-Name/game/factory.php">Bullet Factory</a></li>
+                                <li><a href="/Game-Unkown-Name/game/jail.php">Jail</a></li>
                                 <li><a href="#">Casino</a></li>
                             </ul>
                         </ul>

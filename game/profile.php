@@ -67,7 +67,7 @@ $money = setUserWealth($character[4]);
                                     <table class="table">
                                         <tr>
                                             <td>Name :</td>
-                                            <td><?php echo $character[0]; ?></td>
+                                            <td><?php $character[1] = searchRank($connection_world, $character[1]); echo $character[0]; ?></td>
                                             <td>Status :</td>
                                             <td><?php echo $online; ?></td>
                                         </tr>

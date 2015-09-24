@@ -55,6 +55,7 @@ function expSimpleCrime($connection, $rank, $crime, $username) {
     }
    return $progress;
 }
+
 function addExp ($connection, $username, $exp) {
     $addExp = mysqli_prepare($connection, "UPDATE player SET progress = ? WHERE player_name = ?");
     mysqli_stmt_bind_param($addExp, "ss", $exp, $username);

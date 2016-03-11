@@ -1,4 +1,7 @@
-# Project was canceled, sorry guys!
+# Project news
+11-03-16
+I'm not going to create more features for this project. The reason is because I'm to busy with school and school projects. The current project that is available on Github is the most stable one however it has bugs and unfinished features. In the next week I'll be releasing the full database of this project so that whenever someone wants to continue this projects he or she has everything needed to do so.
+
 
 # Intro
 Hello and welcome! My name is Simon Brink also known as Siembrink. My hobbies are programming and gaming. I am 21 years old and live in The Netherlands. From time to time I will start a few projects to develop my skills on programming, if you are interested in these project be sure to follow them.
